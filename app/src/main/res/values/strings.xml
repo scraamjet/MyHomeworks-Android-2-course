@@ -1,3 +1,29 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">MyApp</string>
+    <string name="add_story_string">Дополнить историю</string>
+    <string name="name_surname_string">Артем Шабунин</string>
+    <string name="three_dots_string">...</string>
+    <string name="add_background_photo_string">Добавить фото обложки</string>
+    <string name="city_functional_button_string">\t\t\t\t\t\t\tГород проживания</string>
+    <string name="work_place_functional_button_string">\t\t\t\t\t\t\tМесто работы</string>
+    <string name="education_functional_button_string">\t\t\t\t\t\t\tУчебное заведение</string>
+    <string name="hometown_functional_button_string">\t\t\t\t\t\t\tРодной город</string>
+    <string name="material_status_functional_button_string">\t\t\t\t\t\t\tСемейное положение</string>
+    <string name="see_information_functional_button_string">\t\t\t\t\t\t\tСмотреть раздел \"Информация\"</string>
+    <string name="edit_name_surname_functional_button_string">Изменить имя и фамилию</string>
+    <string name="todo">TODO</string>
+    <string name="facebook">facebook</string>
+    <string name="name_input_string">Имя</string>
+    <string name="surname_input_string">Фамилия</string>
+    <string name="city_input_string">Место проживания</string>
+    <string name="work_place_input_string">Место работы</string>
+    <string name="email_input_string">Email</string>
+    <string name="sign_up_button_string">Регистрация</string>
+    <string name="work_info_string">\tРабота</string>
+    <string name="city_info_string">\tМесто проживания</string>
+    <string name="email_info_string">\tEmail</string>
+    <string name= "info_action_bar">Информация</string>
+
+
+
 </resources>

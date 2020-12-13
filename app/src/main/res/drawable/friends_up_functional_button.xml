@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/template_for_layer_list_up_functional_button"/>
+    <item android:drawable="@drawable/friends_outlined_icon"
+        android:gravity="center"
+        android:height="31dp"
+        android:width="31dp"/>
+</layer-list>
