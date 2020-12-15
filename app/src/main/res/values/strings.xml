@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Homework</string>
+    <string name = "red_button_text">Red color</string>
+    <string name = "yellow_button_text">Yellow color</string>
+    <string name = "blue_button_text">Blue color</string>
+
 </resources>
