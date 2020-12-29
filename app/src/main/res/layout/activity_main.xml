@@ -4,15 +4,73 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/purple_200"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+
+    <ImageView
+
+        android:id="@+id/icon_1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/icon_2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.488"
+        app:layout_constraintVertical_chainStyle="spread"
+        app:srcCompat="@drawable/ara_icon" />
+
+    <ImageView
+        android:id="@+id/icon_2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/icon_1"
+        app:layout_constraintRight_toLeftOf="@id/icon_3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/australian_ringneck_icon" />
+
+    <ImageView
+        android:id="@+id/icon_3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/icon_2"
+        app:layout_constraintRight_toLeftOf="@id/icon_4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/kakadu_icon" />
+    <ImageView
+        android:id="@+id/icon_4"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/icon_3"
+        app:layout_constraintRight_toLeftOf="@id/icon_5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/korella_icon" />
+    <ImageView
+        android:id="@+id/icon_5"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/icon_4"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/lorikeet_icon" />
+
+    <FrameLayout
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.97">
+
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
