@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/your_text_will_be"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:text="@string/your_text_will_be"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id = "@+id/changing_color_text"
+        android:layout_margin= "5dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:text = "@string/hw_text"
+        android:textColor="@color/black"
+        android:textSize="30sp"/>
+    <Button
+        android:id="@+id/yes_button"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_light"
+        android:text="@string/yes_button_text" />
+
+    <Button
+        android:id="@+id/no_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/no_button_text"
+        android:textSize="20dp"
+        android:background="@android:color/holo_red_dark"
+        android:layout_margin="5dp" />
+
+
+</LinearLayout>

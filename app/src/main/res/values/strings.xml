@@ -1,7 +1,11 @@
 <resources>
     <string name="app_name">Homework</string>
-    <string name = "red_button_text">Red color</string>
-    <string name = "yellow_button_text">Yellow color</string>
-    <string name = "blue_button_text">Blue color</string>
+    <string name="red_button_text">Red color</string>
+    <string name="yellow_button_text">Yellow color</string>
+    <string name="blue_button_text">Blue color</string>
+    <string name = "hw_text">Hello world!</string>
+    <string name="your_text_will_be">Your text will be:</string>
+    <string name = "yes_button_text">Yes</string>
+    <string name = "no_button_text">No</string>
 
 </resources>

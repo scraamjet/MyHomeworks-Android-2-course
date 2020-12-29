@@ -4,14 +4,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_marginTop="200dp"
-    tools:context=".MainActivity">
-
+    android:background="@color/white"
+    tools:context=".FirstActivity">
+    <TextView
+        android:id = "@+id/main_text"
+        android:layout_marginTop="240dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:text = "@string/hw_text"
+        android:textColor="@color/black"
+        android:textSize="30sp"/>
     <Button
         android:id="@+id/red_button"
+        android:layout_margin="5dp"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginBottom="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
         android:background="@android:color/holo_red_dark"
         android:text="@string/red_button_text" />
 
@@ -23,12 +33,13 @@
         android:background="@color/yellow"
         android:layout_margin="5dp" />
 
-    w<Button
+    <Button
         android:id="@+id/blue_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/blue_button_text"
         android:background="@android:color/holo_blue_light"
         android:layout_margin="5dp" />
+
 
 </LinearLayout>
