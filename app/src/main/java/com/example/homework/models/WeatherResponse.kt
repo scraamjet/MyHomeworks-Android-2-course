@@ -1,6 +1,5 @@
-package com.example.homework.response
+package com.example.homework.models
 
-import com.example.homework.response.models.*
 import com.google.gson.annotations.SerializedName
 
 data class WeatherResponse (

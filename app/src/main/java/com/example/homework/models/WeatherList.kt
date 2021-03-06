@@ -1,6 +1,5 @@
-package com.example.homework.response.models
+package com.example.homework.models
 
-import com.example.homework.response.WeatherResponse
 import com.google.gson.annotations.SerializedName
 
 data class WeatherList(@SerializedName("list")

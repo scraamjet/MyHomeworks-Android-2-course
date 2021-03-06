@@ -1,4 +1,4 @@
-package com.example.homework.recyclerview
+package com.example.homework.dto.recyclerview
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView

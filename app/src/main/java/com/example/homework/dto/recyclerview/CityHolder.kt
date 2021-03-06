@@ -1,4 +1,4 @@
-package com.example.homework.recyclerview
+package com.example.homework.dto.recyclerview
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homework.R
 import com.example.homework.dto.CityDTO
-import com.example.homework.services.TemperatureConverter
+import com.example.homework.helpers.TemperatureConverter
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.item_city.*
 
@@ -25,7 +25,7 @@ class CityHolder (
                 this.city = city
                 with(city) {
                     city_name.text = name
-                    temp_text.text = "${temperatureConverter.degConverter(temp)}"
+                    temp_text.text = temperatureConverter.degConverter(temp)
                     temp_text.setTextColor(temperatureConverter.findTempColor(temp.toInt()))
                 }
                 containerView.setOnClickListener{

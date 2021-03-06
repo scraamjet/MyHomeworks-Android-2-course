@@ -1,6 +1,6 @@
 package com.example.homework.api
 
-import com.example.homework.response.WeatherResponse
+import com.example.homework.models.WeatherResponse
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -63,10 +63,10 @@ object ApiFactory {
     suspend fun getWeatherList(latitude: Double, longitude: Double): List<WeatherResponse>{
         return weatherAPI.getWeatherList(latitude , longitude, 30).weather_list
     }
-    suspend fun getWeatherByName(name:String):WeatherResponse{
+    suspend fun getWeatherByName(name:String): WeatherResponse {
         return weatherAPI.getWeatherByName(name)
     }
-    suspend fun getWeatherById(id:Int):WeatherResponse{
+    suspend fun getWeatherById(id:Int): WeatherResponse {
         return weatherAPI.getWeatherById(id)
     }
 

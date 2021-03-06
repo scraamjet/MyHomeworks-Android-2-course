@@ -10,6 +10,9 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.net.toUri
 import com.bumptech.glide.Glide
 import com.example.homework.api.ApiFactory
+import com.example.homework.helpers.PressureConverter
+import com.example.homework.helpers.TemperatureConverter
+import com.example.homework.helpers.WindConverter
 import com.example.homework.services.*
 import kotlinx.android.synthetic.main.activity_weather_info.*
 import kotlinx.coroutines.CoroutineScope
@@ -23,7 +26,7 @@ const val BASE_IMAGE_URI = "http://openweathermap.org/img/wn/"
 class WeatherInfoActivity : AppCompatActivity(),CoroutineScope {
     override val coroutineContext: CoroutineContext = Dispatchers.IO
 
-    private lateinit var temperatureConverter:TemperatureConverter
+    private lateinit var temperatureConverter: TemperatureConverter
     private lateinit var windConverter : WindConverter
     private lateinit var pressureConverter : PressureConverter
     private lateinit var backgroundDrawableHelper : BackgroundDrawableHelper

@@ -20,8 +20,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homework.api.ApiFactory
 import com.example.homework.dto.CityDTO
-import com.example.homework.recyclerview.CityAdapter
-import com.example.homework.services.PermissionHelper
+import com.example.homework.dto.recyclerview.CityAdapter
+import com.example.homework.helpers.PermissionHelper
 import com.google.android.gms.location.LocationServices
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.CoroutineScope

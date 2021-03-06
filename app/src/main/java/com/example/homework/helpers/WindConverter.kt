@@ -1,4 +1,4 @@
-package com.example.homework.services
+package com.example.homework.helpers
 
 class WindConverter {
 
