@@ -1,31 +1,31 @@
 package com.example.homework.response
 
-import com.example.homework.dto.*
+import com.example.homework.response.models.*
 import com.google.gson.annotations.SerializedName
 
 data class WeatherResponse (
-    @SerializedName("id")
+        @SerializedName("id")
     var id: Int,
-    @SerializedName("clouds")
+        @SerializedName("clouds")
     var clouds: Clouds,
-    @SerializedName("cod")
+        @SerializedName("cod")
     var cod: Int,
-    @SerializedName("coord")
+        @SerializedName("coord")
     var coord: Coord,
-    @SerializedName("dt")
+        @SerializedName("dt")
     var dt: Int,
-    @SerializedName("main")
+        @SerializedName("main")
     var main: Main,
-    @SerializedName("name")
+        @SerializedName("name")
     var name: String,
-    @SerializedName("sys")
+        @SerializedName("sys")
     var sys: Sys,
-    @SerializedName("timezone")
+        @SerializedName("timezone")
     var timezone: Int,
-    @SerializedName("visibility")
+        @SerializedName("visibility")
     var visibility: Int,
-    @SerializedName("weather")
+        @SerializedName("weather")
     var weather: List<Weather>,
-    @SerializedName("wind")
+        @SerializedName("wind")
     var wind: Wind
     )

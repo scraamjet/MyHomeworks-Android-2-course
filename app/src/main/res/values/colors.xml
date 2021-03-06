@@ -8,5 +8,11 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name ="blue_theme">#96D4E1</color>
+    <color name="very_cold">#0000E1</color>
+    <color name="cold">#12E1DA</color>
+    <color name="normal">#44E12C</color>
+    <color name="warm">#FFDB00</color>
+    <color name="hot">#FF0522</color>
     <color name="grey_theme">#C9C2E1</color>
+
 </resources>

@@ -10,6 +10,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.homework"
+
         minSdkVersion 19
         targetSdkVersion 30
         versionCode 1
@@ -20,12 +21,14 @@ android {
     androidExtensions {
         experimental = true
     }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -58,5 +61,11 @@ dependencies {
     // endregion
 
     implementation 'com.squareup.okhttp3:logging-interceptor:3.12.8'
-    annotationProcessor 'androidx.room:room-compiler:2.2.5'// 3.13.+ require minSDK 21
+    annotationProcessor 'androidx.room:room-compiler:2.2.5'
+
+    //location services
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
+
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.6.1'
 }
