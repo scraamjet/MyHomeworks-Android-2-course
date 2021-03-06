@@ -48,9 +48,6 @@ class SearchActivity : AppCompatActivity(),CoroutineScope {
     private var cord_latitude:Double? = null
     private var cord_longitude:Double? = null
 
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
@@ -71,11 +68,48 @@ class SearchActivity : AppCompatActivity(),CoroutineScope {
         super.onStart()
         permissionHelper.check(this)
     }
-    private fun goToWeatherInfo(id:Int){
-        val sendWeatherIntent = Intent(this,WeatherInfoActivity::class.java)
-        sendWeatherIntent.putExtra("id",id)
-        startActivity(sendWeatherIntent)
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        var menuInflater = menuInflater
+        menuInflater.inflate(R.menu.menu,menu)
+
+        searchView = menu?.findItem(R.id.action_search)?.actionView as SearchView
+        searchManager = getSystemService(Context.SEARCH_SERVICE) as SearchManager
+
+        searchView.setSearchableInfo(
+                searchManager.getSearchableInfo(componentName)
+        )
+        searchView.isIconified = false
+        searchView.setOnQueryTextListener(object :SearchView.OnQueryTextListener {
+
+            @SuppressLint("ShowToast")
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                city = searchView.query.toString()
+                lifecycleScope.launch {
+                    try {
+                        api.getWeatherByName(city).id.let{
+                            goToWeatherInfo(it)
+                        }
+                    } catch (e: HttpException) {
+                        Snackbar.make(constraintLayoutSearchActivity,
+                                "This city does not exist",
+                                Snackbar.LENGTH_SHORT).show()
+                    }
+                }
+                return true
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                return false
+            }
+
+        }
+
+
+        )
+        return true
     }
+
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         if(!permissionHelper.handle(requestCode, permissions, grantResults)){
             permissionHelper.check(this)
@@ -89,6 +123,12 @@ class SearchActivity : AppCompatActivity(),CoroutineScope {
                     Snackbar.LENGTH_SHORT).show()
             getWeatherListAfterGrantedLocation()
         }
+    }
+
+    private fun goToWeatherInfo(id:Int){
+        val sendWeatherIntent = Intent(this,WeatherInfoActivity::class.java)
+        sendWeatherIntent.putExtra("id",id)
+        startActivity(sendWeatherIntent)
     }
 
     private fun getWeatherListAfterGrantedLocation(){
@@ -123,51 +163,9 @@ class SearchActivity : AppCompatActivity(),CoroutineScope {
                                 }
                             }
                         }
-
                     }
                 }
             }
         }
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        var menuInflater = menuInflater
-        menuInflater.inflate(R.menu.menu,menu)
-
-        searchView = menu?.findItem(R.id.action_search)?.actionView as SearchView
-        searchManager = getSystemService(Context.SEARCH_SERVICE) as SearchManager
-
-        searchView.setSearchableInfo(
-            searchManager.getSearchableInfo(componentName)
-        )
-        searchView.isIconified = false
-        searchView.setOnQueryTextListener(object :SearchView.OnQueryTextListener {
-
-            @SuppressLint("ShowToast")
-            override fun onQueryTextSubmit(query: String?): Boolean {
-                city = searchView.query.toString()
-                lifecycleScope.launch {
-                    try {
-                        api.getWeatherByName(city).id.let{
-                            goToWeatherInfo(it)
-                        }
-                    } catch (e: HttpException) {
-                        Snackbar.make(constraintLayoutSearchActivity,
-                                        "This city does not exist",
-                                Snackbar.LENGTH_SHORT).show()
-                    }
-                }
-                return true
-            }
-
-            override fun onQueryTextChange(newText: String?): Boolean {
-                return false
-            }
-
-        }
-
-
-        )
-        return true
     }
 }

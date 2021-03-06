@@ -1,6 +1,7 @@
 package com.example.homework.services
 
 class WindConverter {
+
         fun convert(wind: Double): String {
             when (wind) {
                 in 337.5..22.5 -> {
@@ -30,4 +31,5 @@ class WindConverter {
                 else -> return ""
         }
     }
+
 }

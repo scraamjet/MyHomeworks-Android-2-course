@@ -77,9 +77,9 @@ class WeatherInfoActivity : AppCompatActivity(),CoroutineScope {
             return idField.getInt(idField)
         } catch (e: Exception) {
             throw RuntimeException(
-                "No resource ID found for: "
-                        + resourceName + " / " + c, e
+                    "No resource ID found for: $resourceName / $c, $e"
             )
         }
     }
+
 }

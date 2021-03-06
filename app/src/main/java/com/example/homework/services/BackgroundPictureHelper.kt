@@ -1,6 +1,7 @@
 package com.example.homework.services
 
 class BackgroundDrawableHelper {
+
     fun findPicture(icon_id:String):String{
         return when(icon_id){
             "01d","01n","02d","02n","03d","03n","04d","04n"-> "background_sky"
@@ -9,4 +10,5 @@ class BackgroundDrawableHelper {
             else-> "background_sky"
         }
     }
+
 }
