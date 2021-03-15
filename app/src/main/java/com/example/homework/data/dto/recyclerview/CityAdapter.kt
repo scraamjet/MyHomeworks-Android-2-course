@@ -1,8 +1,8 @@
-package com.example.homework.dto.recyclerview
+package com.example.homework.data.dto.recyclerview
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.homework.dto.CityDTO
+import com.example.homework.data.dto.CityDTO
 
 class CityAdapter (
     private var list: List<CityDTO>,

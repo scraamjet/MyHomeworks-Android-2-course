@@ -1,4 +1,4 @@
-package com.example.homework.models
+package com.example.homework.data.models
 
 import com.google.gson.annotations.SerializedName
 

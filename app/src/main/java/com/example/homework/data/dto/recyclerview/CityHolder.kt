@@ -1,4 +1,4 @@
-package com.example.homework.dto.recyclerview
+package com.example.homework.data.dto.recyclerview
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homework.R
-import com.example.homework.dto.CityDTO
-import com.example.homework.helpers.TemperatureConverter
+import com.example.homework.data.dto.CityDTO
+import com.example.homework.domain.converters.TemperatureConverter
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.item_city.*
 

@@ -15,7 +15,7 @@
         android:theme="@style/Theme.Homework">
         <activity android:name=".WeatherInfoActivity">
         </activity>
-        <activity android:name=".SearchActivity">
+        <activity android:name=".presentation.SearchActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

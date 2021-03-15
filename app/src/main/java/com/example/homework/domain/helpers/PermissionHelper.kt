@@ -1,4 +1,4 @@
-package com.example.homework.helpers
+package com.example.homework.domain.helpers
 
 import android.app.Activity
 import android.content.Context

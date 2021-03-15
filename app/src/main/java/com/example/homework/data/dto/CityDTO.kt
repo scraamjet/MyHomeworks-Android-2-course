@@ -1,4 +1,4 @@
-package com.example.homework.dto
+package com.example.homework.data.dto
 
 
 data class CityDTO

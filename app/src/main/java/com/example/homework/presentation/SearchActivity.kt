@@ -1,4 +1,4 @@
-package com.example.homework
+package com.example.homework.presentation
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -18,10 +18,11 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.homework.api.ApiFactory
-import com.example.homework.dto.CityDTO
-import com.example.homework.dto.recyclerview.CityAdapter
-import com.example.homework.helpers.PermissionHelper
+import com.example.homework.R
+import com.example.homework.data.api.ApiFactory
+import com.example.homework.data.dto.CityDTO
+import com.example.homework.data.dto.recyclerview.CityAdapter
+import com.example.homework.domain.helpers.PermissionHelper
 import com.google.android.gms.location.LocationServices
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.CoroutineScope
@@ -45,8 +46,8 @@ class SearchActivity : AppCompatActivity(),CoroutineScope {
     private lateinit var city: String
     private lateinit var listDTO:ArrayList<CityDTO>
 
-    private var cord_latitude:Double? = null
-    private var cord_longitude:Double? = null
+    private var cordLatitude:Double? = null
+    private var cordLongitude:Double? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -126,7 +127,7 @@ class SearchActivity : AppCompatActivity(),CoroutineScope {
     }
 
     private fun goToWeatherInfo(id:Int){
-        val sendWeatherIntent = Intent(this,WeatherInfoActivity::class.java)
+        val sendWeatherIntent = Intent(this, WeatherInfoActivity::class.java)
         sendWeatherIntent.putExtra("id",id)
         startActivity(sendWeatherIntent)
     }
@@ -138,11 +139,11 @@ class SearchActivity : AppCompatActivity(),CoroutineScope {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED &&
                 ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             mFusedLocationClient.lastLocation.addOnSuccessListener { location: Location ->
-                cord_latitude = location.latitude
-                cord_longitude = location.longitude
+                cordLatitude = location.latitude
+                cordLongitude = location.longitude
                 Log.d("Coords", "latitude: ${location.latitude}, longitude:${location.longitude}")
-                cord_latitude?.let { lt ->
-                    cord_longitude?.let { ln ->
+                cordLatitude?.let { lt ->
+                    cordLongitude?.let { ln ->
                         launch {
                             val str =
                                     ApiFactory.getWeatherList(lt, ln)

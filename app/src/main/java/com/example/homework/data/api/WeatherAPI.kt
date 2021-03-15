@@ -1,8 +1,8 @@
-package com.example.homework.api
+package com.example.homework.data.api
 
 
-import com.example.homework.models.WeatherResponse
-import com.example.homework.models.WeatherList
+import com.example.homework.data.models.WeatherResponse
+import com.example.homework.data.models.WeatherList
 import retrofit2.http.GET
 import retrofit2.http.Query
 

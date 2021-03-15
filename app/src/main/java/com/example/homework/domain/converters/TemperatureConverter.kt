@@ -1,4 +1,4 @@
-package com.example.homework.helpers
+package com.example.homework.domain.converters
 
 import com.example.homework.R
 
@@ -27,7 +27,7 @@ class TemperatureConverter {
             return 0
     }
 
-    fun degConverter(temp:Int):String{
+    fun convert(temp:Int):String{
         if (temp > 0)
             return "+${temp}°C"
         else

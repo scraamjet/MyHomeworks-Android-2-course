@@ -1,6 +1,6 @@
-package com.example.homework.api
+package com.example.homework.data.api
 
-import com.example.homework.models.WeatherResponse
+import com.example.homework.data.models.WeatherResponse
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit

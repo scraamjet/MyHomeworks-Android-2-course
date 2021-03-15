@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id = "@+id/constraintLayout_activity_search"
-    tools:context=".SearchActivity"
+    tools:context=".presentation.SearchActivity"
     android:background="@color/blue_theme">
 
     <androidx.recyclerview.widget.RecyclerView

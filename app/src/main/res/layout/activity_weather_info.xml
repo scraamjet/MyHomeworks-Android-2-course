@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".WeatherInfoActivity"
-    android:background="@color/blue_theme">
+    android:background="@color/black">
 
     <LinearLayout
         android:id="@+id/linearLayout_weather_details"
