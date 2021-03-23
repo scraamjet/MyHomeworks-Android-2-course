@@ -28,10 +28,10 @@ class TemperatureConverter {
     }
 
     fun convert(temp:Int):String{
-        if (temp > 0)
-            return "+${temp}°C"
+        return if (temp > 0)
+            "+${temp}°C"
         else
-            return "$temp°C"
+            "$temp°C"
     }
 
 }

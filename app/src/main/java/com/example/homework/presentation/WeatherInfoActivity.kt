@@ -19,13 +19,16 @@ import com.example.homework.domain.helpers.BackgroundDrawableHelper
 import kotlinx.android.synthetic.main.activity_weather_info.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
 import kotlin.coroutines.CoroutineContext
 
 const val BASE_IMAGE_URI = "http://openweathermap.org/img/wn/"
 
 class WeatherInfoActivity : AppCompatActivity(),CoroutineScope {
-    override val coroutineContext: CoroutineContext = Dispatchers.IO
+
+    private val job = SupervisorJob()
+    override val coroutineContext: CoroutineContext = Dispatchers.IO + job
 
     private lateinit var temperatureConverter: TemperatureConverter
     private lateinit var windConverter : WindConverter

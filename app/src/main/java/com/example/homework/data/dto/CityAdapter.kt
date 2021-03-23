@@ -1,8 +1,7 @@
-package com.example.homework.data.dto.recyclerview
+package com.example.homework.data.dto
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.homework.data.dto.CityDTO
 
 class CityAdapter (
     private var list: List<CityDTO>,
@@ -11,7 +10,7 @@ class CityAdapter (
     ): RecyclerView.Adapter<CityHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CityHolder =
-    CityHolder.getInstance(parent,itemClick)
+            CityHolder.getInstance(parent, itemClick)
 
     override fun onBindViewHolder(holder: CityHolder, position: Int) {
         holder.bind(list[position])

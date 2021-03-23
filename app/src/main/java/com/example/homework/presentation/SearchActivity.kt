@@ -21,18 +21,20 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.homework.R
 import com.example.homework.data.api.ApiFactory
 import com.example.homework.data.dto.CityDTO
-import com.example.homework.data.dto.recyclerview.CityAdapter
+import com.example.homework.data.dto.CityAdapter
 import com.example.homework.domain.helpers.PermissionHelper
 import com.google.android.gms.location.LocationServices
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
 import retrofit2.HttpException
 import kotlin.coroutines.CoroutineContext
 
 class SearchActivity : AppCompatActivity(),CoroutineScope {
-    override val coroutineContext: CoroutineContext = Dispatchers.IO
+    private val job = SupervisorJob()
+    override val coroutineContext: CoroutineContext = Dispatchers.IO + job
 
     private val api = ApiFactory.weatherAPI
 
@@ -71,7 +73,7 @@ class SearchActivity : AppCompatActivity(),CoroutineScope {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        var menuInflater = menuInflater
+        val menuInflater = menuInflater
         menuInflater.inflate(R.menu.menu,menu)
 
         searchView = menu?.findItem(R.id.action_search)?.actionView as SearchView
