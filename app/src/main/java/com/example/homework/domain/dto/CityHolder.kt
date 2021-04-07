@@ -1,4 +1,4 @@
-package com.example.homework.data.dto
+package com.example.homework.domain.dto
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -16,18 +16,18 @@ class CityHolder (
         ) : RecyclerView.ViewHolder(containerView),
         LayoutContainer{
 
-    private var city: CityDTO? = null
+    private var city: CityItem? = null
     private val temperatureConverter = TemperatureConverter()
 
     @SuppressLint("SetTextI18n")
-    fun bind(city: CityDTO){
+    fun bind(city: CityItem){
                 this.city = city
                 with(city) {
                     city_name.text = name
-                    temp_text.text = temperatureConverter.convert(temp)
+                    temp_text.text = temperatureConverter.convert(temp.toInt())
                     temp_text.setTextColor(temperatureConverter.findTempColor(temp.toInt()))
                 }
-                containerView.setOnClickListener{
+                itemView.setOnClickListener{
                     itemClick(city.id)
                 }
             }

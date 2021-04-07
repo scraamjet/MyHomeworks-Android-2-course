@@ -6,7 +6,7 @@
     android:id="@+id/constraintLayout_activity_weather_info"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WeatherInfoActivity"
+    tools:context=".presentation.WeatherInfoFragment"
     android:background="@color/black">
 
     <LinearLayout
