@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout_activity_weather_info"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.WeatherInfoFragment"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:id="@+id/linearLayout_weather_details"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/tv_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_weather_icon"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:contentDescription="weather" />
+
+        <TextView
+            android:id="@+id/tv_city_temp"
+            android:layout_width="196dp"
+            android:layout_height="160dp"
+            android:gravity="center"
+            android:paddingStart="15dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="64sp"
+            tools:text="+12" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:paddingStart="15dp"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@+id/between_city_name_weather_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_weather_details"
+        tools:text="Clear sky" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/between_city_name_weather_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="272dp" />
+
+    <TextView
+        android:id="@+id/tv_city_name"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:paddingStart="15dp"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout_weather_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/between_city_name_weather_icon"
+        tools:text="Kazan" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout_weather_info"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_city_name">
+        <TextView
+            android:id="@+id/tv_wind"
+            android:layout_width="match_parent"
+            android:textSize="28sp"
+            android:layout_height="44dp"
+            tools:text="Wind:north east"
+            android:drawableLeft="@drawable/baseline_air_white_18dp"
+            android:textColor="@color/white"
+            android:paddingStart="15dp"/>
+        <TextView
+            android:id="@+id/tv_humidity"
+            android:layout_width="match_parent"
+            android:textSize="28sp"
+            android:layout_height="44dp"
+            tools:text="Humidity:51%"
+            android:textColor="@color/white"
+            android:drawableLeft="@drawable/baseline_waves_white_18dp"
+            android:paddingStart="15dp" />
+
+        <TextView
+            android:id="@+id/tv_feels_like"
+            android:layout_width="match_parent"
+            android:textSize="28sp"
+            tools:text="Feels like:+10"
+            android:layout_height="44dp"
+            android:drawableLeft="@drawable/baseline_device_thermostat_white_18dp"
+            android:textColor="@color/white"
+            android:paddingStart="15dp" />
+
+        <TextView
+            android:id="@+id/tv_pressure"
+            android:layout_width="match_parent"
+            android:textSize="28sp"
+            android:layout_height="44dp"
+            tools:text="Pressure:765 m.m."
+            android:drawableLeft="@drawable/baseline_compress_white_18dp"
+            android:textColor="@color/white"
+            android:paddingStart="15dp" />
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
